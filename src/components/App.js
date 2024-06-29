@@ -17,12 +17,12 @@ const App = () => {
         }}></input>
         <button onClick={addTask}>Add the Task</button>
         {todoList.map((task)=>{
-          return(<div>
+          return(<ul>
             <li key={task.id}>{task.data}</li>
             <button onClick={()=>{
             settodoList(todoList.filter(a=>a.id!==task.id))
             }}>Delete</button>
-            </div>
+            </ul>
           )
         })}
     </div>
